@@ -11,8 +11,10 @@ const FormFieldWrapper = styled.div`
     padding-left: 56px;
   }
 `;
+
 const Label = styled.label``;
-Label.text = styled.span`
+
+Label.Text = styled.span`
   color: #e5e5e5;
   height: 57px;
   position: absolute;
@@ -68,20 +70,20 @@ const Input = styled.input`
     );
   }}
 `;
+
 function FormField({ label, type, name, placeholder, value, onChange }) {
-  const fieldId = `id_${name}`;
   const isTypeTextArea = type === "textarea";
   const tag = isTypeTextArea ? "textarea" : "input";
+
   return (
     <FormFieldWrapper>
-      <Label htmlFor={fieldId}>
+      <Label>
         <Input
           as={tag}
-          id={fieldId}
           type={type}
+          value={value}
           name={name}
           placeholder={placeholder}
-          value={value.nome}
           onChange={onChange}
         />
         <Label.Text>{label}:</Label.Text>
@@ -91,10 +93,9 @@ function FormField({ label, type, name, placeholder, value, onChange }) {
 }
 
 FormField.defaultProps = {
-  type: "text",
+  type: "text",
   placeholder: "",
-  value: "",
-  onChange: () => {},
+  value: "",
 };
 
 FormField.propTypes = {
