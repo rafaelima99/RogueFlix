@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import PageRoot from "../../../components/PageRoot";
 import FormField from "../../../components/FormField";
+import Button from "../../../components/Button";
 
 function CadastroCategoria() {
   const valoresIniciais = {
@@ -43,7 +44,6 @@ function CadastroCategoria() {
           placeholder="Filmes, jogos, etc."
           value={values.nome}
           onChange={handleChange}
-          required={true}
         />
 
         <FormField
@@ -53,7 +53,6 @@ function CadastroCategoria() {
           placeholder="Descrição da categoria"
           value={values.descricao}
           onChange={handleChange}
-          required={false}
         />
 
         <FormField
@@ -63,9 +62,8 @@ function CadastroCategoria() {
           placeholder=""
           value={values.cor}
           onChange={handleChange}
-          required={false}
         />
-        <button>Cadastrar</button>
+        <Button>Cadastrar</Button>
       </form>
 
       <ul>
