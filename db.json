@@ -186,42 +186,6 @@
       "categoriaId": 5,
       "titulo": "Resident Evil 8",
       "url": "https://www.youtube.com/watch?v=JSapXD9vxYA"
-    },
-    {
-      "titulo": "Titulo padrao",
-      "url": "https://www.youtube.com/watch?v=-nYNd6EuZHU&feature=youtu.be",
-      "categoriaId": 1,
-      "id": 25
-    },
-    {
-      "titulo": "Titulo padrao",
-      "url": "https://www.youtube.com/watch?v=-nYNd6EuZHU&feature=youtu.be",
-      "categoriaId": 1,
-      "id": 26
-    },
-    {
-      "titulo": "Titulo padrao",
-      "url": "https://www.youtube.com/watch?v=-nYNd6EuZHU&feature=youtu.be",
-      "categoriaId": 1,
-      "id": 27
-    },
-    {
-      "titulo": "Titulo padrao",
-      "url": "https://www.youtube.com/watch?v=-nYNd6EuZHU&feature=youtu.be",
-      "categoriaId": 1,
-      "id": 28
-    },
-    {
-      "titulo": "Titulo padrao",
-      "url": "https://www.youtube.com/watch?v=-nYNd6EuZHU&feature=youtu.be",
-      "categoriaId": 1,
-      "id": 29
-    },
-    {
-      "titulo": "Titulo padrao",
-      "url": "https://www.youtube.com/watch?v=-nYNd6EuZHU&feature=youtu.be",
-      "categoriaId": 2,
-      "id": 30
     }
   ]
 }
