@@ -2,27 +2,18 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import PageRoot from "../../../components/PageRoot";
 import FormField from "../../../components/FormField";
+import useForm from "../../../hooks/useForm";
+import Button from "../../../components/Button";
 
 function CadastroCategoria() {
+  const [categorias, setCategorias] = useState([]);
   const valoresIniciais = {
-    nome: "",
+    titulo: "",
     descricao: "",
     cor: "",
   };
-  const [categorias, setCategorias] = useState([]);
-  const [values, setValues] = useState(valoresIniciais);
 
-  function setValue(key, value) {
-    // chave: nome, descricao, bla, bli
-    setValues({
-      ...values,
-      [key]: value, // nome: 'valor'
-    });
-  }
-
-  function handleChange(event) {
-    setValue(event.target.getAttribute("name"), event.target.value);
-  }
+  const { values, handleChange, clearForm } = useForm(valoresIniciais);
 
   // ============
 
@@ -44,7 +35,7 @@ function CadastroCategoria() {
 
   return (
     <PageRoot>
-      <h1>Cadastro de Categoria: {values.nome}</h1>
+      <h1>Cadastro de Categoria: {values.titulo}</h1>
 
       <form
         onSubmit={function handleSubmit(event) {
@@ -52,15 +43,15 @@ function CadastroCategoria() {
 
           setCategorias([...categorias, values]);
 
-          setValues(valoresIniciais);
+          clearForm();
         }}
       >
         <FormField
-          label="Nome da Categoria"
+          label="Título da Categoria"
           type="text"
-          name="nome"
+          name="titulo"
           placeholder="Filmes, jogos, etc."
-          value={values.nome}
+          value={values.titulo}
           onChange={handleChange}
         />
 
@@ -104,7 +95,7 @@ function CadastroCategoria() {
           </label>
         </div> */}
 
-        <button>Cadastrar</button>
+        <Button>Cadastrar</Button>
       </form>
 
       <ul>
